@@ -1,8 +1,7 @@
 ### Hi, I'm Dimitris
 
-I'm a Tech Lead Manager and senior software engineer working on backend, cloud and agentic AI systems.
-I lead a team of seven back-end engineers at [Proxy Foods](https://github.com/Proxy-Foods), and I still write a lot of the code.
-Knowing the system in detail is how I lead it.
+I'm a software engineer and tech lead with 14 years of experience building backend, cloud and, lately, agentic AI systems.
+I lead engineering teams and I still write a lot of the code. Knowing the system in detail is how I lead it.
 
 I look for what breaks first. I draw a system's flows until the failure has an obvious place to happen, then I design so it shows up early.
 

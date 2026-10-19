@@ -6,7 +6,7 @@ exact values.
 | Field    | Value                                                       | Status                         |
 | -------- | ----------------------------------------------------------- | ------------------------------ |
 | Name     | Dimitris Orfanoudakis                                       | unchanged                      |
-| Bio      | Tech Lead Manager · backend, cloud and agentic AI systems   | approved 2026-10-19            |
+| Bio      | Software engineer and tech lead · 14 years in backend, cloud and agentic AI systems | proposed 2026-10-19 (replaces approved role-specific bio) |
 | Company  | @Proxy-Foods                                                | unchanged                      |
 | Location | Greece                                                      | unchanged                      |
 | Website  | (empty)                                                     | TODO: cv-profile URL once live |
@@ -16,7 +16,7 @@ exact values.
 ## Apply
 
 ```sh
-gh api -X PATCH user -f bio="Tech Lead Manager · backend, cloud and agentic AI systems"
+gh api -X PATCH user -f bio="Software engineer and tech lead · 14 years in backend, cloud and agentic AI systems"
 gh api -X POST user/social_accounts -f "account_urls[]=https://www.linkedin.com/in/dimitrisorfanoudakis/"
 # later, when the site is live:
 gh api -X PATCH user -f blog="https://…"
