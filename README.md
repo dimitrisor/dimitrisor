@@ -1,34 +1,18 @@
 # Hi, I'm Dimitris 👋
 
-Backend Tech Lead and Senior Software Engineer with ~14 years building distributed systems, currently focused in  **production agentic AI**
+Senior Software Engineer & Tech Lead with ~14 years building distributed systems, now focused on **production agentic AI**.
 
-### Currently
-**Backend Tech Lead @ [Proxy Foods](https://<proxy-foods-url>)**, an AI food-tech startup.
-- Own the production agentic platform architecture: LangGraph orchestration, multi-tenant RAG, OpenFGA authorization, LiteLLM routing, Langfuse observability
-- Lead the backend team and the internal AI DevX Group
+**Currently:** Backend Tech Lead @ [Proxy Foods](https://<proxy-foods-url>), owning the agentic platform architecture.
 
-### What I work on
-- **Agentic systems:** LangGraph orchestration, multi-tenant RAG, LLM routing (LiteLLM), tracing & evals (Langfuse)
-- **Authorization at scale:** fine-grained, relationship-based access control (OpenFGA)
-- **Backend & infra:** async Python, FastAPI, PostgreSQL, Docker, Azure (Container Apps, App Service, SQL)
-- **Leadership:** leading backend teams, running an internal AI developer-experience group
+**Previously:** Numan (UK) · Holiday Extras (UK) · Deutsche Telekom (DE) · TAUS (NL) · Bubbllz (GR)
 
+### Focus
+- **Agentic AI:** LangGraph, multi-tenant RAG, LLM routing, observability & evals
+- **Backend & infra:** Python, FastAPI, Django, PostgreSQL, Docker, Azure (Container Apps, App Service, SQL)
+- **Leadership:** Leading backend teams, setting architecture direction, and driving AI-assisted engineering practices (AI DevX Group)
 
-### Previously
-- **Numan (London):** built an FSM engine handling 10k+ evaluations/min and a real-time chat platform
-- **Deutsche Telekom:** Tech Lead
-- **TAUS**, **Bubbllys**
+`Python` `FastAPI` `Django` `LangGraph` `LangChain` `PostgreSQL` `Azure` `Docker` `OpenFGA` `Langfuse`
 
+🎓 MSc Data Science (IHU) · 📍 Thessaloniki, Greece · 🥋 2× national Judo champion
 
-### Stack
-`Python` `FastAPI` `LangGraph` `LangChain` `PostgreSQL` `Azure` `Docker` `OpenFGA` `Langfuse`
-
-
-### Background
-MSc Data Science (International Hellenic University) · BSc Industrial Informatics
-
-
-📍 Thessaloniki, Greece · 🥋 Three-time national Judo champion
-
-
-<!-- Add links: LinkedIn · personal site · email -->
+[LinkedIn](https://www.linkedin.com/in/dimitrisorfanoudakis/) · [Email](mailto:dimitrisorfanudakis@gmail.com)
