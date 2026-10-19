@@ -2,9 +2,8 @@
 
 Senior Software Engineer & Tech Lead with ~14 years building distributed systems, now focused on **production agentic AI**.
 
-**Currently:** Backend Tech Lead @ [Proxy Foods](https://<proxy-foods-url>), owning the agentic platform architecture.
-
-**Previously:** Numan (UK) · Holiday Extras (UK) · Deutsche Telekom (DE) · TAUS (NL) · Bubbllz (GR)
+Currently: Backend Tech Lead @ [Proxy Foods](https://<proxy-foods-url>), owning the agentic platform architecture.
+Previously: Numan (UK) · Holiday Extras (UK) · Deutsche Telekom (DE) · TAUS (NL) · Bubbllz (GR)
 
 ### Focus
 - **Agentic AI:** LangGraph, multi-tenant RAG, LLM routing, observability & evals
