@@ -1,16 +1,19 @@
-## Hi there 👋
+### Hi, I'm Dimitris
 
-<!--
-**dimitrisor/dimitrisor** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I'm a Tech Lead Manager and senior software engineer working on backend, cloud and agentic AI systems.
+I lead a team of seven back-end engineers at [Proxy Foods](https://github.com/Proxy-Foods), and I still write a lot of the code.
+Knowing the system in detail is how I lead it.
 
-Here are some ideas to get you started:
+I look for what breaks first. I draw a system's flows until the failure has an obvious place to happen, then I design so it shows up early.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+**Where I've worked:** Proxy Foods (agentic AI for food and beverage formulation) · Numan (healthcare, UK) ·
+Holiday Extras (UK) · Deutsche Telekom (data governance platform) · TAUS (language-data platforms, NL) · I started in 2012, building Android apps and websites in Greece.
+
+**What I use most:** Python · FastAPI · Django · Java · PostgreSQL · Redis · LangGraph · Langfuse · MCP ·
+AWS · GCP · Azure · Docker · Kubernetes · Terraform · ArgoCD
+
+**How I work:** I draw the flow, find the limits, write the decision down with its trade-offs, and ship in threads anyone can follow.
+
+Most of my work is in private repositories that belong to my clients.
+
+**Contact:** [LinkedIn](https://www.linkedin.com/in/dimitrisorfanoudakis/) · [dimitrisorfanudakis@gmail.com](mailto:dimitrisorfanudakis@gmail.com)
