@@ -24,6 +24,12 @@ top of the profile. The local folder is `~/code/gh-profile`.
   copy metrics into the README unless the human approves them for public use.
 - **Confidentiality.** Employers may be named. Never name colleagues or expose client
   internals.
+- **Role-neutral positioning.** The intro and bio describe him (software engineer and tech
+  lead, years of experience, domains), not his current job title or employer. The
+  current employer appears only in "Where I've worked" and the Company field.
+- **Years of experience.** State the total ("14 years", counted from 2012) so readers do
+  not have to add up dates. It goes stale: update the README and bio each year, and keep
+  it equal to the figure in cv-profile.
 - **Voice.** First person, plain, specific, no hype. English only. Same voice as
   cv-profile.
 - **Clean and minimal.** Plain GitHub-flavoured markdown. No stats cards, visitor
