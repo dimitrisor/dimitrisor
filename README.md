@@ -1,9 +1,9 @@
 # Hi, I'm Dimitris 👋
 
-Senior Software Engineer & Tech Lead with ~14 years building distributed systems, now focused on **production agentic AI**.
+Senior Software Engineer & Tech Lead · ~14 years in distributed systems · now building production agentic AI.
 
-Currently: Backend Tech Lead @ [ProxyFoods AI](https://proxyfoods.ai/), owning the agentic platform architecture.
-Previously: Numan (UK) · Holiday Extras (UK) · Deutsche Telekom (DE) · TAUS (NL) · Bubbllz (GR)
+Backend Tech Lead @ [ProxyFoods AI](https://proxyfoods.ai/), owning the agentic platform.<br>
+Previously: Numan · Holiday Extras · Deutsche Telekom · TAUS · Bubbllz
 
 ### Focus
 - **Agentic AI:** LangGraph, multi-tenant RAG, LLM routing, observability & evals
