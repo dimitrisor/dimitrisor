@@ -7,7 +7,7 @@ exact values.
 | -------- | ----------------------------------------------------------- | ------------------------------ |
 | Name     | Dimitris Orfanoudakis                                       | unchanged                      |
 | Bio      | Software engineer and tech lead · 14 years in backend, cloud and agentic AI systems | proposed 2026-10-19 (replaces approved role-specific bio) |
-| Company  | @Proxy-Foods                                                | unchanged                      |
+| Company  | @Proxy-Foods (GitHub org; company name is "Proxyfoods AI", https://proxyfoods.ai/) | unchanged; the @ links to the org |
 | Location | Greece                                                      | unchanged                      |
 | Website  | (empty)                                                     | TODO: cv-profile URL once live |
 | Hireable | off                                                         | human declined 2026-10-19      |
