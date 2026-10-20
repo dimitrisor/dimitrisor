@@ -6,9 +6,9 @@ Backend Tech Lead @ [ProxyFoods AI](https://proxyfoods.ai/), owning the agentic 
 Previously: Numan · Holiday Extras · Deutsche Telekom · TAUS · Bubbllz
 
 ### Focus
-- **Agentic AI:** LangGraph, multi-tenant RAG, LLM routing, observability & evals
-- **Backend & infra:** Python, FastAPI, Django, PostgreSQL, Docker, Azure (Container Apps, App Service, SQL)
-- **Leadership:** Leading backend teams, setting architecture direction, and driving AI-assisted engineering practices (AI DevX Group)
+- **Agentic AI:** Agentic workflows, LangGraph, multi-tenant RAG, LLM routing, observability & evals
+- **Backend & infra:** Python, FastAPI, Django, PostgreSQL, Docker, Cloud (Container Apps, App Service, SQL)
+- **Leadership:** Leading backend teams, setting architecture direction, and fostering a culture of technical excellence
 
 `Python` `FastAPI` `Django` `LangGraph` `LangChain` `PostgreSQL` `Azure` `Docker` `OpenFGA` `Langfuse`
 
