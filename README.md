@@ -2,7 +2,7 @@
 
 Senior Software Engineer & Tech Lead with ~14 years building distributed systems, now focused on **production agentic AI**.
 
-Currently: Backend Tech Lead @ [Proxyfoods AI](https://proxyfoods.ai/), owning the agentic platform architecture.
+Currently: Backend Tech Lead @ [ProxyFoods AI](https://proxyfoods.ai/), owning the agentic platform architecture.
 Previously: Numan (UK) · Holiday Extras (UK) · Deutsche Telekom (DE) · TAUS (NL) · Bubbllz (GR)
 
 ### Focus
