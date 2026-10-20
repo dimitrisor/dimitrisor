@@ -7,7 +7,7 @@ Previously: Numan · Holiday Extras · Deutsche Telekom · TAUS · Bubbllz
 
 ### Focus
 - **Agentic AI:** Agentic workflows, LangGraph, multi-tenant RAG, LLM routing, observability & evals
-- **Backend & infra:** Python, FastAPI, Django, PostgreSQL, Docker, Cloud (Container Apps, App Service, SQL)
+- **Backend & infra:** Python, FastAPI, Django, PostgreSQL, Docker, AWS, GCP, Azure, Heroku
 - **Leadership:** Leading backend teams, setting architecture direction, and fostering a culture of technical excellence
 
 `Python` `FastAPI` `Django` `LangGraph` `LangChain` `PostgreSQL` `Azure` `Docker` `OpenFGA` `Langfuse`
