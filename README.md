@@ -12,6 +12,6 @@ Previously: Numan · Holiday Extras · Deutsche Telekom · TAUS · Bubbllz
 
 `Python` `FastAPI` `Django` `LangGraph` `LangChain` `PostgreSQL` `Azure` `Docker` `OpenFGA` `Langfuse`
 
-🎓 MSc Data Science (IHU) · 📍 Thessaloniki, Greece · 🥋 2× national Judo champion
+🎓 MSc Data Science (IHU) · 📍 Thessaloniki, Greece · 🥋 2× GR Judo champion
 
 [LinkedIn](https://www.linkedin.com/in/dimitrisorfanoudakis/) · [Email](mailto:dimitrisorfanudakis@gmail.com)
