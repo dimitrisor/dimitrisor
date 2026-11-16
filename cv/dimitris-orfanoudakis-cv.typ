@@ -133,7 +133,7 @@ Senior software engineer since 2012, primarily in backend development.
 
     - Set up Langfuse for tracing and evals, and LiteLLM for model routing
 
-    - Tech: Python, FastAPI, LangGraph, Langchain, MCP, LiteLLM, Langfuse, OpenFGA, Azure AI Search, Azure Postgres, Azure Container Apps,
+    - Tech: Python, FastAPI, LangGraph, Langchain, MCP, LiteLLM, Langfuse, OpenFGA, Azure AI Search, Azure Postgres, Azure Container Apps, Azure Monitor, Application Insights
 
   ],
 )
@@ -156,7 +156,7 @@ Senior software engineer since 2012, primarily in backend development.
 
     - Built a message templating engine with Django templates, merge tags, automated metadata compilation and a web interface
 
-    - Tech: Python, Django, PostgreSQL, Redis, Dramatiq, GCP (Pub\/Sub, BigQuery), Kubernetes, Terraform, ArgoCD
+    - Tech: Python, Django, PostgreSQL, Redis, Dramatiq, GCP (Pub\/Sub, BigQuery), Kubernetes, Terraform, ArgoCD, Grafana, Prometheus, Sentry
 
   ],
 )
@@ -173,7 +173,7 @@ Senior software engineer since 2012, primarily in backend development.
   main-column-second-row: [
     - Built event-driven TypeScript microservices on GCP and Kubernetes for the data operations team
 
-    - Tech: TypeScript, MySQL, GCP, Kubernetes, Terraform , Selenium, Grafana
+    - Tech: TypeScript, MySQL, GCP, Kubernetes, Terraform, Selenium, Grafana, Prometheus, Sentry
 
   ],
 )
@@ -303,6 +303,8 @@ Senior software engineer since 2012, primarily in backend development.
 #strong[Messaging & integration:] AWS SQS, GCP Pub\/Sub, Azure Service Bus, Kafka, Apache Camel, Dramatiq, Celery
 
 #strong[Cloud & infrastructure:] AWS, GCP, Azure, Docker, Kubernetes, Terraform, ArgoCD, GitOps, CI\/CD
+
+#strong[Observability & monitoring:] Grafana, Prometheus, Sentry, Azure Monitor, Application Insights, Langfuse
 
 #strong[Frontend & mobile:] Vue.js, HTML, CSS, Android SDK
 
