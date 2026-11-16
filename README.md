@@ -14,4 +14,4 @@ Previously: Numan · Holiday Extras · Deutsche Telekom
 
 🎓 MSc Data Science (IHU) · 📍 Thessaloniki, Greece · 🥋 2× GR Judo champion
 
-[LinkedIn](https://www.linkedin.com/in/dimitrisorfanoudakis/) · [Email](mailto:dimitrisorfanudakis@gmail.com)
+📄 [CV (PDF)](cv/dimitris-orfanoudakis-cv.pdf) · [LinkedIn](https://www.linkedin.com/in/dimitrisorfanoudakis/) · [Email](mailto:dimitrisorfanudakis@gmail.com)

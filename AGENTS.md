@@ -10,6 +10,9 @@ top of the profile. The local folder is `~/code/gh-profile`.
 ## Scope
 
 - `README.md`: the profile README (the main deliverable).
+- `cv/`: the human's CV, `dimitris-orfanoudakis-cv.pdf` and its Typst source
+  `dimitris-orfanoudakis-cv.typ` (rendercv template). Supplied by the human; replace both
+  together when he sends a new version, never edit them here. The README links the PDF.
 - `profile-fields.md`: the account fields (bio, website, company, location, hireable,
   social links), applied with `gh api`. Change them only after the human approves the
   exact values.
