@@ -101,7 +101,7 @@
 
 == Summary
 
-Senior Software Engineer with 14 years of experience. I design system architectures, lead teams, and turn business problems into technical solutions that ship. Focused on clean software design and agentic AI production systems.
+Senior Software Engineer with 14 years of experience. I design system architectures, lead teams, and turn business problems into technical solutions that ship. Focused on clean software design, Python and agentic AI production systems.
 
 == Experience
 
