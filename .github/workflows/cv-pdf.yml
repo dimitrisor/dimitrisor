@@ -1,0 +1,113 @@
+name: CV PDF
+
+# Builds cv/dimitris-orfanoudakis-cv.pdf from cv/dimitris-orfanoudakis-cv.typ with a pinned
+# Typst and the fonts in cv/fonts/.
+#   * Pull request: builds the PDF and uploads it as an artifact to look at; changes nothing.
+#   * Push to main (or a manual run): when the built PDF differs from the committed one, opens
+#     or updates two pull requests carrying it, branch cv/auto-pdf in each repository:
+#       - this repository: cv/dimitris-orfanoudakis-cv.pdf
+#       - dimitrisor/cv-profile: public/dimitris-orfanoudakis-cv.pdf (the website's download)
+#     They use the CV_PDF_TOKEN secret (a fine-grained token for these two repositories,
+#     Contents and Pull requests read and write), so cv-profile's CI runs on its PR.
+# GitHub-hosted runner on purpose: this repository is public, and the self-hosted runners on
+# the harness are for private repositories only.
+on:
+  push:
+    branches: [main]
+    paths: ["cv/*.typ", "cv/fonts/**", ".github/workflows/cv-pdf.yml"]
+  pull_request:
+    paths: ["cv/*.typ", "cv/fonts/**", ".github/workflows/cv-pdf.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cv-pdf-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  TYPST_VERSION: "0.15.1"
+  TYPST_SHA256: "a6d077d0a95eed5a2eba715b2dae06be954f624ccbf85758a03f389ded33118c"
+  CV_TYP: cv/dimitris-orfanoudakis-cv.typ
+  CV_PDF: cv/dimitris-orfanoudakis-cv.pdf
+  SITE_PDF: public/dimitris-orfanoudakis-cv.pdf
+  BOT_BRANCH: cv/auto-pdf
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # The PR step pushes with CV_PDF_TOKEN; a stored GITHUB_TOKEN would override it.
+          persist-credentials: false
+
+      - name: Install Typst ${{ env.TYPST_VERSION }} (checksum verified)
+        run: |
+          archive="$RUNNER_TEMP/typst.tar.xz"
+          curl -fsSL -o "$archive" \
+            "https://github.com/typst/typst/releases/download/v${TYPST_VERSION}/typst-x86_64-unknown-linux-musl.tar.xz"
+          echo "${TYPST_SHA256}  ${archive}" | sha256sum -c -
+          tar -xJf "$archive" -C "$RUNNER_TEMP"
+          install -D "$RUNNER_TEMP/typst-x86_64-unknown-linux-musl/typst" "$RUNNER_TEMP/bin/typst"
+          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
+
+      - name: Build the PDF
+        run: |
+          # The PDF's creation date is the commit's, so an unchanged CV builds an identical file.
+          export SOURCE_DATE_EPOCH="$(git log -1 --format=%ct)"
+          typst compile --ignore-system-fonts --font-path cv/fonts "$CV_TYP" "$RUNNER_TEMP/cv.pdf" \
+            2> "$RUNNER_TEMP/typst.log" || { cat "$RUNNER_TEMP/typst.log"; exit 1; }
+          cat "$RUNNER_TEMP/typst.log"
+          # A missing font only warns and falls back; fail instead, so the CV never ships in
+          # a substitute font.
+          if grep -qi "unknown font family" "$RUNNER_TEMP/typst.log"; then
+            echo "::error::a font the CV asks for is not in cv/fonts/"; exit 1
+          fi
+          ls -l "$RUNNER_TEMP/cv.pdf"
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: dimitris-orfanoudakis-cv
+          path: ${{ runner.temp }}/cv.pdf
+          retention-days: 14
+
+      - name: Open or update the PDF pull requests
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ secrets.CV_PDF_TOKEN }}
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          [ -n "$GH_TOKEN" ] || { echo "::error::the CV_PDF_TOKEN secret is not set"; exit 1; }
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          short="${SOURCE_SHA::7}"
+          title="CV PDF: rebuilt from ${short}"
+          body="Built automatically by the CV PDF workflow in dimitrisor/dimitrisor from \`${CV_TYP}\` at ${SOURCE_SHA} (Typst ${TYPST_VERSION}, XCharter). Merge it to publish the PDF; the same file goes to the GitHub profile and the website."
+
+          # Commit the built PDF to BOT_BRANCH of a checkout ($1) at path $2, then open the PR
+          # if none is open; an already open PR just gets the new commit.
+          publish() {
+            local dir="$1" path="$2" repo="$3"
+            if cmp -s "$RUNNER_TEMP/cv.pdf" "$dir/$path"; then
+              echo "$repo: $path is already this PDF, nothing to do"; return 0
+            fi
+            git -C "$dir" switch -C "$BOT_BRANCH"
+            cp "$RUNNER_TEMP/cv.pdf" "$dir/$path"
+            git -C "$dir" add "$path"
+            git -C "$dir" commit -q -m "$title"
+            git -C "$dir" push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${repo}.git" "$BOT_BRANCH"
+            if [ "$(gh pr list -R "$repo" --head "$BOT_BRANCH" --state open --json number -q length)" = "0" ]; then
+              gh pr create -R "$repo" --base main --head "$BOT_BRANCH" --title "$title" --body "$body"
+            else
+              gh pr edit "$BOT_BRANCH" -R "$repo" --title "$title" --body "$body"
+            fi
+          }
+
+          publish "$GITHUB_WORKSPACE" "$CV_PDF" "$GITHUB_REPOSITORY"
+
+          site="$RUNNER_TEMP/cv-profile"
+          git clone -q --depth 1 "https://x-access-token:${GH_TOKEN}@github.com/dimitrisor/cv-profile.git" "$site"
+          publish "$site" "$SITE_PDF" "dimitrisor/cv-profile"
