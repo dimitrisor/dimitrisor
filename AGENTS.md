@@ -10,9 +10,13 @@ top of the profile. The local folder is `~/code/gh-profile`.
 ## Scope
 
 - `README.md`: the profile README (the main deliverable).
-- `cv/`: the human's CV, `dimitris-orfanoudakis-cv.pdf` and its Typst source
-  `dimitris-orfanoudakis-cv.typ` (rendercv template). Supplied by the human; replace both
-  together when he sends a new version, never edit them here. The README links the PDF.
+- `cv/`: the human's CV. `dimitris-orfanoudakis-cv.typ` (rendercv template) is the source;
+  change it only with his wording. `dimitris-orfanoudakis-cv.pdf` is **built, never edited
+  or exported by hand**: on every push to main that changes the `.typ` or `cv/fonts/`, the
+  `CV PDF` workflow (`.github/workflows/cv-pdf.yml`) compiles it with pinned Typst and the
+  XCharter fonts in `cv/fonts/`, then opens a PR with the new PDF here and one in
+  `dimitrisor/cv-profile` (the website's download), both on branch `cv/auto-pdf`. The README
+  links the PDF.
 - `profile-fields.md`: the account fields (bio, website, company, location, hireable,
   social links), applied with `gh api`. Change them only after the human approves the
   exact values.
